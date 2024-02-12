@@ -100,3 +100,41 @@ excavaciones_equipo <- data.frame(
   fecha_final = fecha_final
 )
 print(excavaciones_equipo)
+
+#13
+set.seed(123)
+n_registros <- 10
+
+descubiertos <- sample(c("Carmona","Valencina","Santiponce"), n_registros, replace = TRUE)
+sitio <- sample(c("Tumba","Horno","Tierra"), n_registros, replace = TRUE)
+edad <- sample(c(20,40,75,90,100), n_registros, replace = TRUE)
+sexo <- sample(c("Hombre","Mujer"), n_registros, replace = TRUE)
+huesos <- sample(c("100% encontrados","75% encontrados","50% encontrados","25% encontrados","0% encontrados"), n_registros, replace = TRUE)
+
+datos_esqueletos <- data.frame(
+  descubiertos = descubiertos,
+  sitio = sitio,
+  edad = edad,
+  sexo = sexo,
+  huesos = huesos
+)
+print(datos_esqueletos)
+
+#14
+set.seed(123)
+n_registros <- 7
+
+ubicación <- sample(c("Yacimiento 1","Yacimiento 2","Yacimiento 3","Yacimiento 4"), n_registros, replace = TRUE)
+sitio <- sample(c("Castillo","Teatro","Hogar"), n_registros, replace = TRUE)
+latitud <- sample(c(4:20), n_registros, replace = TRUE)
+longitud <- sample(c(30:100), n_registros, replace = TRUE)
+altitud <- sample(c(300:500), n_registros, replace = TRUE)
+
+ubicaciones_geográficas <- data.frame(
+  ubicación = ubicación,
+  sitio = sitio,
+  latitud = latitud,
+  longitud = longitud,
+  altitud = altitud
+)
+print(ubicaciones_geográficas)
